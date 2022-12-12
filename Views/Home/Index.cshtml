@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="content-wrapper">
+    <section class="content">
+        <div class="container">
+            <div class="row">
+                <div class="box-body p-15">
+                    <div class="table-responsive">
+                        <div class="canvas_div_pdf" style="display: block;">
+                            <table id="tickets" class="table mt-0 table-hover no-wrap table-bordered" data-page-size="10">
+                                <thead>
+                                    <tr>
+                                        <th>Sigorta Şirket <br /> Hasar Dosya No</th>
+                                        <th>Sigortalı Adı <br /> Rapor No</th>
+                                        <th>İhbar Tarihi <br /> Hasar Tarihi</th>
+                                        <th>Ekspertiz Yeri <br /> Ekspertiz Tarihi</th>
+                                        <th>Eksper Adı <br /> Raportor</th>
+                                        <th>Açık Süre <br /> Dosya Durumu</th>
+                                        <th>Hasar</th>
+                                        <th>EV</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>sigorta_sirketi <br /> dosya_no</td>
+                                        <td>
+                                            <a>sigortali_adi <br /> yeni_dosya_id</a>
+                                        </td>
+                                        <td>ihbar_tar <br /> hasar_tar</td>
+                                        <td>ihbar_tar <br /> ekspertiz_tar</td>
+                                        <td>eksper_firma <br /> aktif </td>
+                                        @*<td><span class="badge badge-warning">@item.ihbar_tar</span></td>*@
+                                        <td>s_tahmini_hasar</td>
+                                        <td>
+                                            <button type="button" class="btn btn-icon-circle btn-danger" data-toggle="tooltip" data-original-title="Delete"><i class="ti-trash" aria-hidden="true"></i></button>
+                                            <a href="@Url.Action("PDFdonustur")" target="_blank">PDF<i class="mdi-file-pdf" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
